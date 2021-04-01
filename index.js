@@ -69,26 +69,10 @@ function draw(){
         }
         
         //collision
-        //top
-        if (birdY <= pipes[i].y + pipeNorth.height && birdX + bird.width == pipes[i].x){ 
-            isGameOver = true;s
-            console.log(1)
-        }else if(birdY <= pipes[i].y + pipeNorth.height && birdX >= pipes[i].x){
-                isGameOver = true;
-                console.log(2)
-         
+      
+        if( birdX + bird.width >= pipes[i].x && birdX <= pipes[i].x + pipeNorth.width && (birdY <= pipes[i].y + pipeNorth.height || birdY+bird.height >= pipes[i].y + constant)){
+            isGameOver = true
         }
-
-        if (birdY >= pipes[i].y + constant  && birdX + bird.width == pipes[i].x){ 
-            isGameOver = true;
-            console.log(1)
-        }
-        else if(birdY + bird.height >= pipes[i].y + constant  && birdX + bird.width >= pipes[i].x){
-                isGameOver = true;
-                console.log(2)
-         
-        }
-
 
         
             
